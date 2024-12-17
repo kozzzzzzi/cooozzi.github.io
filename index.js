@@ -217,20 +217,6 @@ function popping() {
     }
 }
 
-function display(element, source, handler) {
-    element.innerHTML = '';
-    var img = document.createElement('img');
-    img.src = source[4] + '.jpg';
-    var span = document.createElement('span');
-    span.innerText = source[language];
-    element.style.background = '#' + source[2];
-    element.style.color = '#' + source[3];
-    element.append(img);
-    element.append(span);
-    element.addEventListener('click', handler);
-    return 0;
-}
-
 function select(num) {
     btn_left.removeEventListener('click', select0);
     btn_right.removeEventListener('click', select0);
@@ -261,8 +247,8 @@ function select(num) {
         queue.push([popped[0], popped[1], popped[2] + 1 - num, popped[3] + num]);
     }
     popped = [];
-    span_progress.innerText = (progress * 100 / 112).toFixed(1) + '%';
-    span_progress.style.background = `linear-gradient(to right, #fff ${progress * 100 / 112}%, #fff ${progress * 100 / 112}%)`;
+    span_progress.innerText = (progress * 100 / 130).toFixed(1) + '%';
+    span_progress.style.background = `linear-gradient(to right, #fff ${progress * 100 / 130}%, #fff ${progress * 100 / 130}%)`;
     while (popping()) {}
     return 0;
 }
