@@ -68,20 +68,6 @@ function run() {
         }
     }
 
-    function display(element, source, handler) {
-        element.innerHTML = ''
-        var img = document.createElement('img')
-        img.src = source[4] + '.jpg';
-        var span = document.createElement('span')
-        span.innerText = source[language]
-        element.style.background = '#' + source[2]
-        element.style.color = '#' + source[3]
-        element.append(img)
-        element.append(span)
-        element.addEventListener('click', handler)
-        return 0
-    }
-
     function callData(key) {
         if (typeof (key) == 'number')
             return data[key]
