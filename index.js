@@ -247,8 +247,8 @@ function select(num) {
         queue.push([popped[0], popped[1], popped[2] + 1 - num, popped[3] + num]);
     }
     popped = [];
-    span_progress.innerText = (progress * 100 / 130).toFixed(1) + '%';
-    span_progress.style.background = `linear-gradient(to right, #fff ${progress * 100 / 130}%, #fff ${progress * 100 / 130}%)`;
+    span_progress.innerText = (progress * 100 / 112).toFixed(1) + '%';
+    span_progress.style.background = `linear-gradient(to right, #fff ${progress * 100 / 112}%, #fff ${progress * 100 / 112}%)`;
     while (popping()) {}
     return 0;
 }
